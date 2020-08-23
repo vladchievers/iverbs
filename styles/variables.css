@@ -1,0 +1,6 @@
+:root{
+    --white: #ffffff;
+    --background: linear-gradient(180deg, rgba(13,146,228,1) 0%, rgba(99,206,255,1) 51%);
+    --color: #222222;
+    --borderColor: rgba(128,128,128, .5);
+}
