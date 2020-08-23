@@ -1,0 +1,12 @@
+{
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "display": "browser",
+    "scope": "/",
+    "start_url": "https://iverbs.vercel.app/",
+    "icons": [{
+        "src": "icons/512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }]
+  }

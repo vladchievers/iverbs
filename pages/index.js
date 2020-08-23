@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Head from "next/head";
 import json from "../data/verbs";
 
 import Layout from "../components/Layout";
@@ -14,29 +15,40 @@ export default function Home() {
     const { value } = e.target;
     setTimeout(() => {
       setInputValue(value);
-    }, 500)
+    }, 500);
   };
 
   useEffect(() => {
     handleFilter();
-  }, [inputValue])
+  }, [inputValue]);
 
   const handleFilter = () => {
-    if(inputValue){
+    if (inputValue) {
       const filteredVerbs = json.verbs.filter(
         (el) =>
           el["Base"].includes(inputValue.toLowerCase()) ||
           el["Past-simple"].includes(inputValue.toLowerCase()) ||
           el["Past-Participle"].includes(inputValue.toLowerCase())
       );
-      setVerbs(filteredVerbs)
-    }else{
-      setVerbs(json.verbs)
+      setVerbs(filteredVerbs);
+    } else {
+      setVerbs(json.verbs);
     }
-   
   };
   return (
     <Layout>
+      <Head>
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta name="description" content="Check yourself or quickly find that you need." />
+        <meta name="keywords" content="Keywords" />
+        <title>Irregular verbs</title>
+
+        <link rel="manifest" href="/manifest.json" />
+      </Head>
       <Title />
       <Input handleInput={handleInput} />
       <Table verbs={verbs} />
