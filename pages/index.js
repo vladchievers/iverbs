@@ -39,6 +39,7 @@ export default function Home() {
     <Layout>
       <Head>
         <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
         <meta
           name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
@@ -46,7 +47,8 @@ export default function Home() {
         <meta name="description" content="Check yourself or quickly find that you need." />
         <meta name="keywords" content="Keywords" />
         <title>Irregular verbs</title>
-
+        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <meta name="theme-color" content="#317EFB"/>  
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <Title />
