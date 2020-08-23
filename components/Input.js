@@ -1,8 +1,8 @@
-// import Search from '../assets/svg/search.svg';
+import Search from '../assets/svg/search.svg';
 const Input = ({ handleInput }) => {
     return (
         <div className='inputWrapper'>
-            {/* <Search /> */}
+            <Search />
             <input type="search" placeholder="Enter the verb that you need" onChange={handleInput}/>
         </div>
     )

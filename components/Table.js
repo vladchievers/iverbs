@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-// import Copy from "../assets/svg/copy.svg";
+import Copy from "../assets/svg/copy.svg";
 
 const Table = ({ verbs }) => {
   const [copied, setCopied] = useState("");
@@ -20,6 +20,7 @@ const Table = ({ verbs }) => {
         <div key={el["Base"]} className="tableRow">
           <div onClick={handleCopy} id={el["Base"]} className={`tableCell ${copied === el["Base"] ? 'copied' : ''}`}>
             <span>{el["Base"]}</span> 
+            <Copy />
           </div>
           <div
             onClick={handleCopy}
@@ -27,6 +28,7 @@ const Table = ({ verbs }) => {
             className={`tableCell ${copied === el["Past-simple"] ? 'copied' : ''}`}
           >
             <span>{el["Past-simple"]}</span> 
+            <Copy />
           </div>
           <div
             onClick={handleCopy}
@@ -34,6 +36,7 @@ const Table = ({ verbs }) => {
             className={`tableCell ${copied === el["Past-Participle"] ? 'copied' : ''}`}
           >
             <span>{el["Past-Participle"]}</span> 
+            <Copy />
           </div>
         </div>
       ))}
